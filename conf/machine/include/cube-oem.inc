@@ -57,6 +57,8 @@ IMAGE_DEVICE_TABLES = ""
 PREFERRED_VERSION_wpa-supplicant = "0.5.8"
 PREFERRED_VERSION_rtl8192cu = "3.3.0"
 PREFERRED_VERSION_nfs-utils ?= "1.2.8"
+PREFERRED_VERSION_samba = "3.%"
+PREFERRED_VERSION_directfb = "1.7.7"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-cube"
 PREFERRED_VERSION_linux-cube = "2.6.34"
@@ -68,6 +70,7 @@ GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
 
 SOC_FAMILY = "pnx8471"
 TARGET_ARCH = "arm"
+DEFAULTTUNE = "armv7a"
 TUNE_FEATURES = "cortexa9 vfp"
 include conf/machine/include/tune-cortexa9.inc
 require conf/machine/include/soc-family.inc
@@ -75,4 +78,4 @@ TUNE_CCARGS += "-mfpu=vfpv3-d16"
 
 IMAGE_FSTYPES ?= "imgzip256"
 
-MACHINE_FEATURES += "3dtv alsa hdmicec switchoff textlcd dvbapi5 usbhost wifiusblegacy legacykernel"
+MACHINE_FEATURES += "3dtv alsa hdmicec switchoff textlcd dvbapi5 usbhost wifiusblegacy legacykernel singlecore"
