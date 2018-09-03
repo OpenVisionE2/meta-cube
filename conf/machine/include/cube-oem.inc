@@ -54,12 +54,8 @@ IMAGE_CMD_imgzip1024 = "\
 
 IMAGE_DEVICE_TABLES = ""
 
-PREFERRED_VERSION_linux-libc-headers = "3.1"
 PREFERRED_VERSION_wpa-supplicant = "0.5.8"
 PREFERRED_VERSION_rtl8192cu = "3.3.0"
-PREFERRED_VERSION_nfs-utils ?= "1.2.8"
-PREFERRED_VERSION_samba = "3.%"
-PREFERRED_VERSION_directfb = "1.7.7"
 PREFERRED_VERSION_libnl = "3.2.24"
 PREFERRED_VERSION_libarchive = "3.1.2"
 PREFERRED_VERSION_wscan = "20130331"
@@ -69,7 +65,7 @@ PREFERRED_VERSION_linux-cube = "2.6.34"
 
 OLDEST_KERNEL = "2.6.34"
 GCCVERSION = "4.9.4"
-GLIBCVERSION = "2.23"
+GLIBCVERSION = "2.19"
 
 GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
 
