@@ -69,4 +69,4 @@ TUNE_CCARGS += "-mfpu=vfpv3-d16"
 
 IMAGE_FSTYPES ?= "imgzip256"
 
-MACHINE_FEATURES += "3dtv alsa hdmicec switchoff textlcd dvbapi5 usbhost wifiusblegacy legacykernel singlecore"
+MACHINE_FEATURES += "3dtv alsa hdmicec switchoff textlcd dvbapi5 usbhost wifiusblegacy legacykernel singlecore oldkernel"
