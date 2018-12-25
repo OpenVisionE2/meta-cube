@@ -1,2 +1,2 @@
 # meta-cube
-Cube BSP layer for PLi's OE
+Cube BSP layer for Open Vision
