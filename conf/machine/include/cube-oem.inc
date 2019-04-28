@@ -1,6 +1,8 @@
 # We know about rtc
 include conf/machine/include/build-extras.inc
 
+BOX_BRAND = "cube"
+
 # magic value to avoid flashing an image which was intended to run on different hardware
 CREATEIMAGE_MAGIC = "0x00109500"
 
