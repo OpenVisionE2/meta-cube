@@ -4,7 +4,7 @@ LICENSE = "GPLv2"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "cube"
+COMPATIBLE_MACHINE = "^(cube)$"
 
 inherit kernel machine_kernel_pr
 
