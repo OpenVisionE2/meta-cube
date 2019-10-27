@@ -3,8 +3,6 @@ SECTION = "console/utils"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://createimage.c;firstline=2;endline=13;md5=c93a0d6160b7f4ce64067b5326cce929"
 
-PN = "createimage-${MACHINE}"
-
 SRC_URI = "file://createimage.c"
 
 S = "${WORKDIR}"

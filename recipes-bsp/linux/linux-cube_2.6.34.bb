@@ -26,7 +26,7 @@ RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
 DEPENDS = "virtual/${TARGET_PREFIX}gcc"
-RDEPENDS_kernel-image = "updateubivolume"
+RDEPENDS_kernel-image = "updateubivolume-${MACHINE}"
 
 SRC_URI = " \
     ${KERNELORG_MIRROR}/linux/kernel/v${PV}/linux-${PV}.tar.bz2;name=kernel \
