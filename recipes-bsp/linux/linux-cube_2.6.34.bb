@@ -22,7 +22,7 @@ SRC_URI[kernel.sha256sum] = "fa395fec7de633df1cb85b6248b8f35af98380ed128a8bc465f
 # package names instead, to allow only one kernel to be installed.
 PKG_kernel-base = "kernel-base"
 PKG_kernel-image = "kernel-image"
-RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
+RPROVIDES_${KERNEL_PACKAGE_NAME}-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
 DEPENDS = "virtual/${TARGET_PREFIX}gcc"
