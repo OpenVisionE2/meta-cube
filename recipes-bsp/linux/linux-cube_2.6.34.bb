@@ -193,11 +193,9 @@ SRC_URI = " \
     file://262-ephy_powerdown.patch \
     file://263-kronos-krome_splash_fix.patch \
     file://300-dmxdev-unblock-read-on-ioctl.patch \
-    file://0001-kernel-add-support-for-gcc-5.patch \
     file://fix_return_address_warning.patch \
     file://rtl8712-fix-warnings.patch \
     file://rtl8187se-fix-warnings.patch \
-    file://kernel-add-support-for-gcc6.patch \
     file://timeconst_perl5.patch \
     file://0001-dvb_frontend-backport-multistream-support.patch \
     "
