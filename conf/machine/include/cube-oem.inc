@@ -57,7 +57,11 @@ PREFERRED_VERSION_linux-cube = "2.6.34"
 
 OLDEST_KERNEL = "2.6.34"
 GCCVERSION = "4.9.4"
-GLIBCVERSION = "2.19"
+GLIBCVERSION = "2.25"
+
+PREFERRED_VERSION_cross-localedef-native = "2.30"
+
+HOSTTOOLS_NONFATAL += "whoami"
 
 GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
 
