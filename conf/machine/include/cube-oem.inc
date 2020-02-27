@@ -1,5 +1,5 @@
 # We know about rtc
-include conf/machine/include/build-extras.inc
+require conf/machine/include/build-extras.inc
 
 BOX_BRAND = "cube"
 
@@ -18,7 +18,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
     gstreamer1.0-plugin-dvbmediasink \
     "
 
-include conf/machine/include/autoload-filesystems.inc
+require conf/machine/include/autoload-filesystems.inc
 
 DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dtsdownmix --with-eac3"
 
@@ -65,7 +65,7 @@ SOC_FAMILY = "pnx8471"
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "armv7a"
 TUNE_FEATURES = "cortexa9 vfp"
-include conf/machine/include/tune-cortexa9.inc
+require conf/machine/include/tune-cortexa9.inc
 require conf/machine/include/soc-family.inc
 TUNE_CCARGS += "-mfpu=vfpv3-d16"
 
