@@ -17,3 +17,5 @@ do_install() {
 }
 
 BBCLASSEXTEND = "native"
+
+do_configure[nostamp] = "1"
