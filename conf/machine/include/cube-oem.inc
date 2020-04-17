@@ -1,5 +1,5 @@
 # We know about rtc
-require conf/machine/include/build-extras.inc
+MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
 BOX_BRAND = "cube"
 
@@ -18,7 +18,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
     gstreamer1.0-plugin-dvbmediasink \
     "
 
-require conf/machine/include/autoload-filesystems.inc
+KERNEL_MODULE_AUTOLOAD += "xfs"
 
 DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dtsdownmix --with-eac3"
 
