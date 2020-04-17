@@ -31,6 +31,7 @@ RDEPENDS_kernel-image = "updateubivolume-${MACHINE}"
 SRC_URI = " \
     ${KERNELORG_MIRROR}/linux/kernel/v${PV}/linux-${PV}.tar.bz2;name=kernel \
     file://defconfig \
+    file://${OPENVISION_BASE}/openvision-oe/recipes-linux/kernel-patches/kernel-add-support-for-gcc6.patch \
     file://100-arm-linux.patch \
     file://101-apollo_stb.patch \
     file://102-unionfs-2.5.4.patch \
@@ -196,7 +197,6 @@ SRC_URI = " \
     file://fix_return_address_warning.patch \
     file://rtl8712-fix-warnings.patch \
     file://rtl8187se-fix-warnings.patch \
-    file://kernel-add-support-for-gcc6.patch \
     file://timeconst_perl5.patch \
     file://0001-dvb_frontend-backport-multistream-support.patch \
     "
