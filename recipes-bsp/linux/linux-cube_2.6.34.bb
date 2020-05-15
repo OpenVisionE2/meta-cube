@@ -31,7 +31,7 @@ RDEPENDS_kernel-image = "updateubivolume-${MACHINE}"
 SRC_URI = " \
     ${KERNELORG_MIRROR}/linux/kernel/v${PV}/linux-${PV}.tar.bz2;name=kernel \
     file://defconfig \
-    file://${OPENVISION_BASE}/openvision-oe/recipes-linux/kernel-patches/kernel-add-support-for-gcc6.patch \
+    file://${OPENVISION_BASE}/openvision-oe/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
     file://100-arm-linux.patch \
     file://101-apollo_stb.patch \
     file://102-unionfs-2.5.4.patch \
