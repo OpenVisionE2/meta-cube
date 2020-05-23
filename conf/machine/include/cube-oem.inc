@@ -42,6 +42,8 @@ IMAGE_CMD_imgzip256 = "\
     rm -f ${DEPLOY_DIR_IMAGE}/*.zip; \
     cd ${DEPLOY_DIR_IMAGE}; \
     zip ${IMAGE_NAME}_256MB.zip ${IMAGEDIR}/*; \
+    rm -f ${DEPLOY_DIR_IMAGE}/*.ubi; \
+    rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
     rm -Rf ${IMAGEDIR}; \
     "
 
