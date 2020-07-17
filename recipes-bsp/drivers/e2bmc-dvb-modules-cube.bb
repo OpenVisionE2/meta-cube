@@ -1,4 +1,3 @@
-KV = "2.6.34"
 SRCDATE = "20141203"
 
 require e2bmc-dvb-modules.inc
