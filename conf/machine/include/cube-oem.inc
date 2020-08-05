@@ -27,7 +27,6 @@ MULTIBOOT_IMAGE_NAME ?= "${IMAGE_BASENAME}"
 # a rootfs size of 192MB should be sufficient (can be overridden by an image)
 ROOTFS_SIZE ?= "C000000"
 
-UBI_VOLNAME = "rootfs"
 
 # image name in the zipfile, can be overridden by an image
 ZIPFILE_IMAGE_NAME ?= "firmware.img"
