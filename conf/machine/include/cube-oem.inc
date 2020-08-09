@@ -1,6 +1,8 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
+KERNELVERSION = "2.6.34"
+
 BOX_BRAND = "cube"
 
 # magic value to avoid flashing an image which was intended to run on different hardware
@@ -9,15 +11,14 @@ CREATEIMAGE_MAGIC = "0x00109500"
 IMAGEDIR = "flash-image-256"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    e2bmc-dvb-modules-cube \
-    "
+	e2bmc-dvb-modules-cube \
+	"
 
 DVBPROVIDER = "kernel"
 
 MACHINE_EXTRA_RRECOMMENDS += "\
-    gstreamer1.0-plugin-dvbmediasink \
-    "
-
+	gstreamer1.0-plugin-dvbmediasink \
+	"
 
 DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dtsdownmix --with-eac3"
 
@@ -26,7 +27,6 @@ MULTIBOOT_IMAGE_NAME ?= "${IMAGE_BASENAME}"
 
 # a rootfs size of 192MB should be sufficient (can be overridden by an image)
 ROOTFS_SIZE ?= "C000000"
-
 
 # image name in the zipfile, can be overridden by an image
 ZIPFILE_IMAGE_NAME ?= "firmware.img"
@@ -52,7 +52,7 @@ PREFERRED_VERSION_rtl8192cu = "3.3.0"
 PREFERRED_VERSION_wscan = "20130331"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-cube"
-PREFERRED_VERSION_linux-cube = "2.6.34"
+PREFERRED_VERSION_linux-cube = "${KERNELVERSION}"
 
 OLDEST_KERNEL = "2.6.34"
 GCCVERSION = "4.9.4"
