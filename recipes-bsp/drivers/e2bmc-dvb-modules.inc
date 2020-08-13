@@ -23,14 +23,14 @@ do_populate_sysroot() {
 
 do_install() {
     install -d ${D}${base_libdir}/modules/${KV}/extra
-    install -d ${D}/${sysconfdir}/modules-load.d
+    install -d ${D}${sysconfdir}/modules-load.d
     install -m 0755 ${WORKDIR}/*.ko ${D}${base_libdir}/modules/${KV}/extra
     if [ -d ${WORKDIR}/firmware ]; then
-        install -d ${D}/lib/firmware
-        install -m 0644 ${WORKDIR}/firmware/* ${D}/lib/firmware
+        install -d ${D}${base_libdir}/firmware
+        install -m 0644 ${WORKDIR}/firmware/* ${D}${base_libdir}/firmware
     fi
     for i in ${MACHINE}_1 ${MACHINE}_2 ${MACHINE}_3 ${MACHINE}_4; do
-        echo $i >> ${D}/${sysconfdir}/modules-load.d/_${MACHINE}.conf
+        echo $i >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
     done
 }
 

@@ -12,6 +12,6 @@ do_compile() {
 }
 
 do_install() {
-    install -d ${D}/${bindir}
-    install ${S}/updateubivolume ${D}/${bindir}
+    install -d ${D}${bindir}
+    install ${S}/updateubivolume ${D}${bindir}
 }
