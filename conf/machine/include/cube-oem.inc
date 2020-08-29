@@ -12,13 +12,10 @@ IMAGEDIR = "flash-image-256"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	e2bmc-dvb-modules-cube \
+	gstreamer1.0-plugin-dvbmediasink \
 	"
 
 DVBPROVIDER = "kernel"
-
-MACHINE_EXTRA_RRECOMMENDS += "\
-	gstreamer1.0-plugin-dvbmediasink \
-	"
 
 DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dtsdownmix --with-eac3"
 
