@@ -31,16 +31,20 @@ ZIPFILE_IMAGE_NAME ?= "firmware.img"
 IMAGE_DEPENDS_imgzip256 = "createimage-${MACHINE}-native mtd-utils-native"
 
 IMAGE_CMD_imgzip256 = "\
-    mkfs.ubifs -r ${IMAGE_ROOTFS} -o ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}_256.ubifs -m 2048 -e 126976 -c 4096; \
-    mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
-    createimage_${MACHINE} 126976 ${MULTIBOOT_IMAGE_NAME} kernel ${DEPLOY_DIR_IMAGE}/zImage-${MACHINE}.bin 0 0 rootfs ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}_256.ubifs ${ROOTFS_SIZE} 1 > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${ZIPFILE_IMAGE_NAME}; \
-    rm -f ${DEPLOY_DIR_IMAGE}/*.zip; \
-    cd ${DEPLOY_DIR_IMAGE}; \
-    zip ${IMAGE_NAME}_256MB.zip ${IMAGEDIR}/*; \
-    rm -f ${DEPLOY_DIR_IMAGE}/*.ubi; \
-    rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
-    rm -Rf ${IMAGEDIR}; \
-    "
+	mkfs.ubifs -r ${IMAGE_ROOTFS} -o ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}_256.ubifs -m 2048 -e 126976 -c 4096; \
+	mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
+	createimage_${MACHINE} 126976 ${MULTIBOOT_IMAGE_NAME} kernel ${DEPLOY_DIR_IMAGE}/zImage-${MACHINE}.bin 0 0 rootfs ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}_256.ubifs ${ROOTFS_SIZE} 1 > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${ZIPFILE_IMAGE_NAME}; \
+	rm -f ${DEPLOY_DIR_IMAGE}/*.zip; \
+	cd ${DEPLOY_DIR_IMAGE}; \
+	zip ${IMAGE_NAME}_256MB.zip ${IMAGEDIR}/*; \
+	rm -f ${DEPLOY_DIR_IMAGE}/*.ubi; \
+	rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
+	rm -Rf ${IMAGEDIR}; \
+	"
+
+IMAGE_CMD_prepend = "\
+	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
+	"
 
 IMAGE_DEVICE_TABLES = ""
 
