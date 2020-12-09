@@ -6,7 +6,6 @@ require conf/license/license-close.inc
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-
 PV = "${KV}+${SRCDATE}"
 
 SRC_URI = "http://source.mynonpublic.com/cube/cube-drivers-${KV}-${SRCDATE}.zip"
@@ -16,9 +15,6 @@ S = "${WORKDIR}"
 INHIBIT_PACKAGE_STRIP = "1"
 
 do_compile() {
-}
-
-do_populate_sysroot() {
 }
 
 do_install() {
