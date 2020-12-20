@@ -55,8 +55,8 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-cube"
 PREFERRED_VERSION_linux-cube = "${KERNELVERSION}"
 
 OLDEST_KERNEL = "2.6.34"
-GCCVERSION = "4.9.4"
-GLIBCVERSION = "2.19"
+GCCVERSION_cube = "4.9.4"
+GLIBCVERSION_cube = "2.19"
 
 GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
 
