@@ -49,7 +49,7 @@ IMAGE_CMD_prepend = "\
 
 IMAGE_DEVICE_TABLES = ""
 
-PREFERRED_VERSION_rtl8192cu = "3.3.0"
+PREFERRED_VERSION_kernel-module-extrawlan-rtl8192cu = "3.3.0"
 PREFERRED_VERSION_wscan = "20130331"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-cube"
@@ -58,6 +58,8 @@ PREFERRED_VERSION_linux-cube = "${KERNELVERSION}"
 OLDEST_KERNEL = "${KERNELVERSION}"
 GCCVERSION_cube = "4.9.4"
 GLIBCVERSION_cube = "2.19"
+PREFERRED_VERSION_glibc_cube = "2.19"
+PREFERRED_VERSION_glibc-initial_cube = "2.19"
 
 GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
 
