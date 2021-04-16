@@ -14,7 +14,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	e2bmc-dvb-modules-cube \
 	"
 
-DVBPROVIDER = "kernel"
 
 DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dtsdownmix --with-eac3"
 
