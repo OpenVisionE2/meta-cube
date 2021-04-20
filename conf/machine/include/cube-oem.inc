@@ -72,6 +72,6 @@ TUNE_CCARGS += "-mfpu=vfpv3-d16"
 
 IMAGE_FSTYPES ?= "imgzip256"
 
-MACHINE_FEATURES += "alsa hdmicec switchoff textlcd dvbapi5 usbhost oldkernel HDMI SCART RCA"
+MACHINE_FEATURES += "alsa hdmicec switchoff textlcd dvbapi5 usbhost oldkernel HDMI SCART RCA wifiusblegacy"
 
 RCNAME = "cube"
