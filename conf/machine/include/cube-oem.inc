@@ -75,3 +75,5 @@ IMAGE_FSTYPES ?= "imgzip256"
 MACHINE_FEATURES += "alsa hdmicec switchoff textlcd dvbapi5 usbhost oldkernel HDMI SCART RCA wifiusblegacy"
 
 RCNAME = "cube"
+
+DISPLAY_BRAND = "MK-Digital"
